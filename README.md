@@ -153,23 +153,23 @@ You can find reNgine documentation on [https://rengine.wiki](https://rengine.wik
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
-## Quick Installation
+## 快速安装
 
 **(Only Ubuntu/VPS)**
 
-1. Clone this repo
+1. Clone 这个项目
 
 ```
 git clone https://github.com/yogeshojha/rengine && cd rengine
 ```
 
-2. Edit the dotenv file, **please make sure to change the password for postgresql POSTGRES_PASSWORD !**
+2. 编辑dotenv文件，**请确保更改postgresql POSTGRES_password的密码**
 
 ```
 nano .env
 ```
 
-3. Run the installation script, Please keep an eye for any prompt, you will also be asked for username and password for reNgine.
+3. 运行安装脚本，请留意任何提示，您还将被要求输入reNgine的用户名和密码。
 
 ```
 sudo ./install.sh
@@ -177,11 +177,11 @@ sudo ./install.sh
 
 if `./install.sh` does not have install permission, please change it, `chmod +x install.sh`
 
-**reNgine can now be accessed from https://127.0.0.1 or if you're on the VPS https://your_vps_ip_address**
+**现在可以从以下位置访问reNgine: https://127.0.0.1或者如果你在VPS上: https://your_vps_ip_address**
 
 A detailed installation guide can also be found [here](https://www.rffuste.com/2022/05/23/rengine-a-brief-overview/). Thanks to Rubén!
 
-## Installation (Mac/Windows/Other)
+## 其他安装 (Mac/Windows/Other)
 
 Installation instructions can be found at [https://reNgine.wiki/install/detailed/](https://reNgine.wiki/install/detailed/)
 
@@ -220,33 +220,33 @@ Please find the [FAQ](https://www.huntr.dev/faq) and [Responsible disclosure pol
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
-## Screenshots
+## 屏幕截图
 
-**Scan Results**
+**扫描结果**
 
 ![](.github/screenshots/scan_results.gif)
 
-**General Usage**
+**一般用法**
 
 <img src="https://user-images.githubusercontent.com/17223002/164993781-b6012995-522b-480a-a8bf-911193d35894.gif">
 
-**Initiating Subscan**
+**启动子域名扫描**
 
 <img src="https://user-images.githubusercontent.com/17223002/164993749-1ad343d6-8ce7-43d6-aee7-b3add0321da7.gif">
 
-**Recon Data filtering**
+**侦查数据过滤**
 
 <img src="https://user-images.githubusercontent.com/17223002/164993687-b63f3de8-e033-4ac0-808e-a2aa377d3cf8.gif">
 
-**Report Generation**
+**报告生成**
 
 <img src="https://user-images.githubusercontent.com/17223002/164993689-c796c6cd-eb61-43f4-800d-08aba9740088.gif">
 
-**Toolbox**
+**工具箱**
 
 <img src="https://user-images.githubusercontent.com/17223002/164993751-d687e88a-eb79-440f-9dc0-0ad006901620.gif">
 
-**Adding Custom tool in Tools Arsenal**
+**在Tools Arsenar中添加自定义工具**
 
 <img src="https://user-images.githubusercontent.com/17223002/164993670-466f6459-9499-498b-a9bd-526476d735a7.gif">
 
