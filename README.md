@@ -177,7 +177,7 @@ sudo ./install.sh
 
 if `./install.sh` does not have install permission, please change it, `chmod +x install.sh`
 
-**现在可以从以下位置访问reNgine: https://127.0.0.1或者如果你在VPS上: https://your_vps_ip_address**
+**现在可以从以下位置访问reNgine: https://127.0.0.1 或者如果你在VPS上: https://your_vps_ip_address**
 
 A detailed installation guide can also be found [here](https://www.rffuste.com/2022/05/23/rengine-a-brief-overview/). Thanks to Rubén!
 
