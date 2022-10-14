@@ -21,16 +21,15 @@
 <a href="https://discord.gg/H6WzebwX3H" target="_blank"><img src="https://img.shields.io/discord/880363103689277461" alt="" /></a>&nbsp;
 </p>
 
-<h3>reNgine 1.1<br>More than just recon!</h3>
-<h4>The only web application recon tool you will ever need!</h4>
+<h4>您将永远需要的唯一web应用程序侦察工具！</h4>
 
-<p>Quickly discover the attack surface, and identify vulnerabilities using highly customizable and powerful scan engines.
-Enjoy peace of mind with reNgine's continuous monitoring, deeper reconnaissance, and open-source powered Vulnerability Scanner.</p>
+<p>使用高度可定制且功能强大的扫描引擎，快速发现攻击面并识别漏洞。
+使用reNgine的持续监控、更深入的侦察和开源的漏洞扫描器，您可以放心。</p>
 
 <h4>What is reNgine?</h4>
-<p align="left">reNgine is a web application reconnaissance suite with focus on a highly configurable streamlined recon process via Engines, recon data correlation, continuous monitoring, recon data backed by a database, and a simple yet intuitive User Interface. With features such as sub-scan, deeper co-relation, report generation, etc. reNgine aims to fix the gap in the traditional recon tools and probably a better alternative for existing commercial tools.
+<p align="left">reNgine是一个web应用程序侦察套件，专注于通过引擎、侦察数据关联、持续监控、数据库支持的侦察数据以及简单直观的用户界面实现高度可配置的简化侦察过程。凭借子扫描、深层关联、报告生成等功能，reNgine旨在弥补传统侦察工具的不足，并可能是现有商业工具的更好替代品。
 
-reNgine makes it easy for penetration testers and security auditors to gather reconnaissance data with bare minimal configuration.
+reNgine使渗透测试人员和安全审计员可以轻松地用最少的配置收集侦察数据。
 </p>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
@@ -98,21 +97,21 @@ You can watch [reNgine 1.1 release trailer here.](https://www.youtube.com/watch?
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
-reNgine is a web application reconnaissance suite with a focus on a highly configurable streamlined recon process. reNgine is backed by a database, with data correlation and organization, the custom query “like” language for recon data filtering, reNgine aims to address the shortcomings of traditional recon workflow.
+reNgine是一个web应用程序侦察套件，专注于高度可配置的简化侦察过程。reNgine由数据库支持，具有数据关联和组织功能，使用自定义查询“类似”语言进行侦察数据过滤，reNgine旨在解决传统侦察工作流的缺点。
 
-Developers behind the reNgine understand that recon data can be huge, and manually looking up for entries to attack could be cumbersome, with features like identifying Interesting Subdomains, helping penetration testers focus on attack rather than recon.
+reNgine背后的开发人员知道，侦察数据可能非常庞大，手动查找要攻击的条目可能很麻烦，具有识别有趣子域等功能，帮助渗透测试人员专注于攻击而不是侦察。
 
-reNgine is also focused on continuous monitoring. Penetration testers can choose to schedule the scan at periodic intervals and get notified on notification channels like Discord, Slack, and Telegram for any new subdomains or vulnerabilities identified, or any recon data changes.
+reNgine还专注于持续监测。渗透测试人员可以选择定期安排扫描，并在通知通道（如Discord、Slack和Telegram）上获得有关已识别的任何新子域或漏洞或任何侦察数据更改的通知。
 
-Interoperability is something every recon tool needs, and reNgine is no different. Beginning reNgine 1.0, we additionally developed features such as import and export subdomains, endpoints, GF pattern matched endpoints, etc. This will allow you to use your favorite recon workflow in conjunction with reNgine.
+互操作性是每个侦察工具都需要的东西，reNgine也一样。从reNgine 1.0开始，我们额外开发了导入和导出子域、端点、GF模式匹配端点等功能。这将允许您将您喜欢的侦察工作流与reNgine1.0结合使用。
 
-PDF reports are something every individual or a team needs. Beginning reNgine 1.1, reNgine also comes with an option to download PDF reports. One can also choose the type of report, Full Scan Report or just a reconnaissance report. Also, we understand that PDF reports need to be customizable. Choose the color of the report you like, customize the executive summary, etc. You choose the way your pdf report looks!
+PDF报告是每个个人或团队都需要的东西。从reNgine1.1开始，reNgine还提供了下载PDF报告的选项。您还可以选择报告类型，全面扫描报告或只是侦察报告。此外，我们了解PDF报告需要可定制。选择您喜欢的报告颜色，自定义执行摘要等。您可以选择pdf报告的外观！
 
-reNgine features Highly configurable scan engines based on YAML, that allows penetration testers to create as many recon engines as they want of their choice, configure as they wish, and use them against any targets for the scan. These engines allow penetration testers to use tools of their choice, the configuration of their choice. Out of the box, reNgine comes with several scan engines like Full Scan, Passive Scan, Screenshot gathering, OSINT Engine, etc.
+reNgine具有基于YAML的高度可配置扫描引擎，允许渗透测试人员根据自己的选择创建任意多个侦察引擎，根据自己的意愿进行配置，并针对扫描的任何目标使用这些引擎。这些引擎允许渗透测试人员使用他们选择的工具和他们选择的配置。reNgine自带多个扫描引擎，如全扫描、被动扫描、截图收集、OSINT引擎等。
 
-Our focus has always been on finding the right recon data with very minimal effort. After having several discussions with fellow hackers/pentesters, a screenshots gallery was a must, reNgine also comes with a screenshot gallery, and what's more exciting than having a screenshot gallery with filters, filter screenshots with HTTP status, technology, ports, and services.
+我们的重点始终是以最小的努力找到正确的侦察数据。在与其他黑客/penters进行了几次讨论后，屏幕截图库是必须的，reNgine还提供了屏幕截图，比拥有带有过滤器的屏幕截图、带有HTTP状态、技术、端口和服务的过滤器屏幕截图更令人兴奋。
 
-We also want our fellow hackers to stay ahead of the game, reNgine also comes with automatic vulnerability reporting (ATM only Hackerone is supported, other platforms may come soon). This allows hackers to define their vulnerability report template and reNgine will do the rest of the job to report vulnerability as soon as it is identified.
+我们还希望我们的黑客同行保持领先地位，reNgine还提供了自动漏洞报告（仅支持ATM Hackerone，其他平台可能很快就会推出）。这允许黑客定义其漏洞报告模板，一旦发现漏洞，reNgine将完成剩余的工作来报告漏洞。
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png)
 
