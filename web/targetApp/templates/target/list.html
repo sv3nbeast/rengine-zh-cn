@@ -13,12 +13,12 @@ List all targets
 {% endblock custom_js_css_link %}
 
 {% block breadcrumb_title %}
-<li class="breadcrumb-item active"><a href="{% url 'list_target' %}">Targets</a></li>
-<li class="breadcrumb-item"><a href="#">All Targets</a></li>
+<li class="breadcrumb-item active"><a href="{% url 'list_target' %}">目标</a></li>
+<li class="breadcrumb-item"><a href="#">全部目标</a></li>
 {% endblock breadcrumb_title %}
 
 {% block page_title %}
-Targets
+目标
 {% endblock page_title %}
 
 {% block main_content %}
@@ -29,17 +29,17 @@ Targets
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
 						<button type="button" class="btn btn-primary dropdown-toggle mt-1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="filterMenu">
-							Filter <i class="fe-filter"></i>
+							筛选 <i class="fe-filter"></i>
 						</button>
 						<div class="dropdown-menu" style="width: 30%">
 							<div class="px-4 py-3">
 								<h4 class="headline-title">Filters</h4>
-								<label for="filterByOrganization" class="form-label">Filter by Organization</label>
+								<label for="filterByOrganization" class="form-label">按组织筛选</label>
 								<select class="form-control" id="filterByOrganization">
 								</select>
 							</div>
 							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-ite text-primary float-end" id="resetFilters">Reset Filters</a>
+							<a href="#" class="dropdown-ite text-primary float-end" id="resetFilters">重置筛选</a>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -60,13 +60,13 @@ Targets
 				<table id="list_target_table" class="table style-3 table-hover">
 					<thead>
 						<tr>
-							<th class="checkbox-column text-center">Serial Number</th>
-							<th>Serial Number</th>
-							<th>Target</th>
-							<th>Description</th>
-							<th class="text-center">Added On</th>
-							<th class="text-center">Last Scanned</th>
-							<th class="text-center">Action</th>
+							<th class="checkbox-column text-center">序列号</th>
+							<th>序列号</th>
+							<th>目标</th>
+							<th>描述</th>
+							<th class="text-center">添加时间</th>
+							<th class="text-center">最后一次扫描</th>
+							<th class="text-center">动作</th>
 						</tr>
 					</thead>
 				</table>
