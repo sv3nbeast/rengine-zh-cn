@@ -743,7 +743,7 @@
           {% endfor %}
         </div>
         {% if ip_addresses.count %}
-          <h4 class="subheading" style="margin-top: 10px;">IP Addresses</h4>
+          <h4 class="subheading" style="margin-top: 10px;">IP 地址</h4>
           <h4>{{ip_addresses.count}} IP Addresses were identified on <span class="primary-color">{{scan_object.domain.name}}</span></h4>
           <div class="table">
             <div class="row header bg-info">
@@ -864,7 +864,7 @@
           {{scan_object.get_info_vulnerability_count}} of them were Informational.
           {{scan_object.get_unknown_vulnerability_count}} of them were Unknown Severity.
         </p>
-        <h4 class="subheading">Vulnerability Breakdown by Severity</h4>
+        <h4 class="subheading">漏洞严重性分布</h4>
         <div id="boxes">
           <section style="width: 30%">
             <p class="bg-critical">Critical
@@ -965,7 +965,7 @@
               {% if vulnerability.list.0.cve_ids.all %}
               <br>
               <br>
-              <span class="mini-heading">CVE IDs</span><br>
+              <span class="mini-heading">CVE 编号</span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;{% for cve in vulnerability.list.0.cve_ids.all %} {{cve}}{% if not forloop.last %}, {% endif %} {% endfor %}
               {% endif %}
               {% if vulnerability.list.0.cwe_ids.all %}
