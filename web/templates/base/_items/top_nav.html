@@ -26,12 +26,12 @@
               <a href="{% url 'scheduled_scan_view' %}" class="dropdown-item">扫描计划</a>
               <div class="dropdown-divider"></div>
               <a href="{% url 'all_subdomains' %}" class="dropdown-item">所有子域名</a>
-              <a href="{% url 'all_endpoints' %}" class="dropdown-item">所有端口</a>
+              <a href="{% url 'all_endpoints' %}" class="dropdown-item">所有URL</a>
             </div>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link arrow-none" href="{% url 'all_vulns' %}">
-              <i class="fe-alert-triangle me-1"></i> Vulnerabilities
+              <i class="fe-alert-triangle me-1"></i> 漏洞
             </a>
           </li>
           <li class="nav-item dropdown {{recon_note_active}}">
@@ -41,17 +41,17 @@
           </li>
           <li class="nav-item dropdown {{organization_active}}">
             <a class="nav-link arrow-none" href="{% url 'list_organization' %}">
-              <i class="fe-briefcase me-1"></i> Organization
+              <i class="fe-briefcase me-1"></i> 组织
             </a>
           </li>
           <li class="nav-item dropdown {{scan_engine_nav_active}}">
             <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-scanengine" role="button"
               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fe-cpu me-1"></i> Scan Engine
+              <i class="fe-cpu me-1"></i> 扫描引擎
               <div class="arrow-down"></div>
             </a>
             <div class="dropdown-menu" aria-labelledby="topnav-scanengine">
-              <a href="{% url 'scan_engine_index' %}" class="dropdown-item">Scan Engines</a>
+              <a href="{% url 'scan_engine_index' %}" class="dropdown-item">扫描引擎</a>
               <a href="{% url 'wordlist_list' %}" class="dropdown-item">Wordlists</a>
               <a href="{% url 'interesting_lookup' %}" class="dropdown-item">Interesting Lookup</a>
             </div>
@@ -64,12 +64,12 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="topnav-settings">
               <a href="{% url 'proxy_settings' %}" class="dropdown-item">Proxies</a>
-              <a href="{% url 'tool_settings' %}" class="dropdown-item">Tool Settings</a>
-              <a href="{% url 'tool_arsenal' %}" class="dropdown-item">Tools Arsenal</a>
-              <a href="{% url 'report_settings' %}" class="dropdown-item">Report Settings</a>
+              <a href="{% url 'tool_settings' %}" class="dropdown-item">工具 Settings</a>
+              <a href="{% url 'tool_arsenal' %}" class="dropdown-item">工具箱</a>
+              <a href="{% url 'report_settings' %}" class="dropdown-item">报告 Settings</a>
               <a href="{% url 'rengine_settings' %}" class="dropdown-item">reNgine Settings</a>
               <a href="{% url 'hackerone_settings' %}" class="dropdown-item">Hackerone Settings</a>
-              <a href="{% url 'notification_settings' %}" class="dropdown-item">Notification Settings</a>
+              <a href="{% url 'notification_settings' %}" class="dropdown-item">通知 Settings</a>
             </div>
           </li>
         </ul>

@@ -59,7 +59,7 @@ inputBox.onclick = (event) => {
       break;
       default:
       badge_color = "primary";
-      title = `Filter subdomain that contains <span class="badge badge-soft-blue">${data}</span>`;
+      title = `筛选包含以下内容的子域 <span class="badge badge-soft-blue">${data}</span>`;
     }
     return data = `<li id="dropdown-li" class="text-dark"><div class="row"><div class="col-6" id="filter_name"><span class="text-${badge_color}">${filter_icon}</span>&nbsp;${data}</div><div class="col-6 text-dark" id="filter_name"> ${title}</span></div></div></li>`;
   });
