@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Add New Wordlist
+添加新字典
 {% endblock title %}
 
 
@@ -15,7 +15,7 @@ Add New Wordlist
 {% endblock breadcrumb_title %}
 
 {% block page_title %}
-Add New Wordlist for Bruteforce
+添加新字典用于暴力破解
 {% endblock page_title %}
 
 {% block main_content %}
@@ -23,34 +23,34 @@ Add New Wordlist for Bruteforce
   <div class="col-12">
     <div class="card">
       <div class="card-body">
-        <p>Wordlist can be used for directory bruteforce or subdomain bruteforce. Instructions on how to use the wordlist are <a href="https://rengine.wiki/usage/wordlist/">found here <i class="fe-external-link"></i></a></p>
+        <p>字典可用于目录bruteforce或子域名bruteforce。 关于如何使用字典的说明如下 <a href="https://rengine.wiki/usage/wordlist/">found here <i class="fe-external-link"></i></a></p>
         <form class="simple-example" method="POST" enctype="multipart/form-data">
           {% csrf_token %}
           <div class="row">
             <div class="col-6">
-              <label for="name" class="form-label">Wordlist Name</label>
+              <label for="name" class="form-label">字典名称</label>
               {{ form.name }}
             </div>
             <div class="col-6">
-              <label for="short_name" class="form-label">Short Name</label>
+              <label for="short_name" class="form-label">简称</label>
               {{ form.short_name }}
               {% if form.errors.short_name %}
               <div class="invalid-feedback" style="display: block;">
                 {{ form.errors.short_name|striptags }}
               </div>
               {% endif %}
-              <p class="text-primary mt-1">Please keep the short names without spaces, like my-wordlist or my_wordlist. The short names will be later used to reference wordlist in the YAML settings.</p>
+              <p class="text-primary mt-1">请保留不带空格的短名称,如my-wordlist或my_wordlist。短名称稍后将用于引用YAML设置中的字典列表。</p>
             </div>
             <div>
-              <h4 class="header-title">Select the wordlist file</h4>
-              <p class="text-primary">Your wordlist must be a *.txt file and wordlists must seperated by new line.</p>
+              <h4 class="header-title">选择字典文件</h4>
+              <p class="text-primary">您的字典必须是*.txt文件,并且字典必须用换行分隔。</p>
             </div>
             <div class="custom-file mb-4">
               <label class="form-label" for="txtFile">Choose *.txt file</label>
               {{ form.upload_file }}
             </div>
           </div>
-          <button class="btn btn-primary submit-fn mt-2 float-end" type="submit">Upload Wordlist</button>
+          <button class="btn btn-primary submit-fn mt-2 float-end" type="submit">上传字典</button>
         </form>
       </div>
     </div>
