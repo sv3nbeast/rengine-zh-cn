@@ -128,11 +128,11 @@ Scan Findings
 									<i class="fe-more-vertical"></i>
 								</a>
 								<div class="dropdown-menu" style="">
-									<a class="dropdown-item" href="javascript:download_subdomains({{scan_history_id}}, '{{history.domain.name}}')">Download All Subdomains</a>
-									<a class="dropdown-item" href="javascript:download_endpoints({{scan_history_id}}, '{{history.domain.name}}')">Download All Endpoints</a>
-									<a class="dropdown-item" href="javascript:download_important_subdomains({{scan_history_id}}, '{{history.domain.name}}');">Download Important Subdomains</a>
-									<a class="dropdown-item" href="javascript:download_interesting_subdomains({{scan_history_id}}, '{{history.domain.name}}');">Download Interesting Subdomains</a>
-									<a class="dropdown-item" href="javascript:download_interesting_endpoints({{scan_history_id}}, '{{history.domain.name}}');">Download Interesting Endpoints</a>
+									<a class="dropdown-item" href="javascript:download_subdomains({{scan_history_id}}, '{{history.domain.name}}')">下载所有子域名</a>
+									<a class="dropdown-item" href="javascript:download_endpoints({{scan_history_id}}, '{{history.domain.name}}')">下载所有端口</a>
+									<a class="dropdown-item" href="javascript:download_important_subdomains({{scan_history_id}}, '{{history.domain.name}}');">下载重要子域名</a>
+									<a class="dropdown-item" href="javascript:download_interesting_subdomains({{scan_history_id}}, '{{history.domain.name}}');">下载有趣的子域名</a>
+									<a class="dropdown-item" href="javascript:download_interesting_endpoints({{scan_history_id}}, '{{history.domain.name}}');">下载有趣的端点</a>
 								</div>
 							</div>
 						</div>
@@ -141,10 +141,10 @@ Scan Findings
 							<p class="text-danger">Scan failed due to ERROR: {{history.error_message}}</p>
 						{% endif %}
 						{% endif %}
-						<h6 class="font-13 text-muted text-uppercase">Scan Engine <span class="badge badge-soft-primary float-end">{{history.scan_type.engine_name}}</span></h6>
-						<h6 class="font-13 text-muted text-uppercase mt-3">Scan Duration </h6>
+						<h6 class="font-13 text-muted text-uppercase">扫描引擎 <span class="badge badge-soft-primary float-end">{{history.scan_type.engine_name}}</span></h6>
+						<h6 class="font-13 text-muted text-uppercase mt-3">扫描持续时间 </h6>
 						{% if history.scan_status == -1 %}
-						<p class="mt-1 mb-0 text-warning font-14"><small class="text-center text-muted">Scan not yet started.</small></p>
+						<p class="mt-1 mb-0 text-warning font-14"><small class="text-center text-muted">扫描尚未开始.</small></p>
 						{% elif history.scan_status == 0 %}
 						<span class="mt-1 mb-0 text-danger font-14">{{ history.start_scan_date|timesince:history.stop_scan_date }}</span>
 						{% elif history.scan_status == 1 %}
@@ -160,7 +160,7 @@ Scan Findings
 						{% endif %}
 
 
-						<h3 class="font-13 text-muted text-uppercase mb-2">Scan Progress</h3>
+						<h3 class="font-13 text-muted text-uppercase mb-2">扫描进度</h3>
 						<div class="progress mb-2 progress-md">
 							{% if history.scan_status == -1 %}
 							<div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuemin="0" aria-valuemax="100">
@@ -186,13 +186,13 @@ Scan Findings
 						</div>
 
 						{% if  history.domain.get_organization %}
-						<h3 class="font-13 text-muted text-uppercase mb-2">Tagged to Organization</h3>
+						<h3 class="font-13 text-muted text-uppercase mb-2">标记到组织</h3>
 						{% for organization in history.domain.get_organization %}
 						<span class="badge badge-soft-dark m-1" data-toggle="tooltip" data-placement="top" title="Domain {{domain.name}} belongs to organization {{organization.name}}">{{ organization.name }}</span>
 						{% endfor %}
 						{% endif %}
 
-						<h6 class="font-13 text-muted text-uppercase mt-4 mb-2">Scan Timeline</h6>
+						<h6 class="font-13 text-muted text-uppercase mt-4 mb-2">扫描时间线</h6>
 						<div data-simplebar style="max-height: 410px;" class="p-2">
 							<div class="track-order-list">
 								<ul class="list-unstyled">
@@ -224,7 +224,7 @@ Scan Findings
 						<div class="d-flex align-items-start mb-3">
 							<div class="w-100">
 								<h5 class="mt-0 mb-0 font-15">
-									Recent Scans for <span class="badge badge-soft-primary">{{history.domain.name}}</span>
+									最近的扫描 <span class="badge badge-soft-primary">{{history.domain.name}}</span>
 								</h5>
 								<div class="track-order-list mt-3">
 									<ul class="list-unstyled">
@@ -234,27 +234,27 @@ Scan Findings
 												<h5 class="mt-0 mb-1">
 													{% if history.id == scan.id %}
 													<span class="active-dot dot"></span>
-													<span class="float-start badge badge-soft-primary ms-1 me-1">Current Scan</span>
+													<span class="float-start badge badge-soft-primary ms-1 me-1">当前扫描</span>
 													{% endif %}
 													{{scan.scan_type.engine_name}}
 													{% if scan.scan_status == -1 %}
-													<span class="badge badge-soft-warning float-end">Pending</span>
+													<span class="badge badge-soft-warning float-end">排队</span>
 													{% elif scan.scan_status == 0 %}
-													<span class="badge badge-soft-danger float-end">Failed</span>
+													<span class="badge badge-soft-danger float-end">失败</span>
 													{% elif scan.scan_status == 1 %}
-													<span class="badge badge-soft-primary float-end">Scanning</span>
+													<span class="badge badge-soft-primary float-end">正在扫描</span>
 													{% elif scan.scan_status == 2 %}
-													<span class="badge badge-soft-success float-end">Completed</span>
+													<span class="badge badge-soft-success float-end">完成</span>
 													{% elif scan.scan_status == 3 %}
-													<span class="badge badge-soft-danger float-end">Aborted</span>
+													<span class="badge badge-soft-danger float-end">已中止</span>
 													{% else %}
-													<span class="badge badge-soft-danger float-end">Unknown</span>
+													<span class="badge badge-soft-danger float-end">未知</span>
 													{% endif %}
 												</h5>
 												<br>
 												<p class="text-muted">{{scan.start_scan_date|naturaltime}}<br><small class="text-muted">{{scan.start_scan_date}}</small></p>
 												<p class="text-primary">
-													{{scan.get_subdomain_count}} Subdomains Discovered
+													{{scan.get_subdomain_count}} 发现的子域
 													<span class="float-end text-dark">
 														{% with next_element=most_recent_scans|next:forloop.counter0 %}
 														{% if next_element.get_subdomain_count and scan.get_subdomain_count and next_element.get_subdomain_count > scan.get_subdomain_count %}
@@ -284,7 +284,7 @@ Scan Findings
 						<div class="d-flex align-items-start mb-3">
 							<div class="w-100">
 								<h5 class="mt-0 mb-0 font-15">
-									<span id="sub_scan_history_count"></span> Sub Scan History for <span class="badge badge-soft-primary">{{history.domain.name}}</span>
+									<span id="sub_scan_history_count"></span> 子域名扫描历史记录 <span class="badge badge-soft-primary">{{history.domain.name}}</span>
 								</h5>
 								<div data-simplebar style="max-height: 510px;" class="p-2">
 									<div id="subscan_history_widget">
@@ -301,10 +301,10 @@ Scan Findings
 						<div class="card" id="tooltip-container">
 							<div class="card-body">
 								<i class="fa fa-info-circle text-muted float-end" data-bs-container="#tooltip-container" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Total Subdomains Discovered by reNgine during this scan"></i>
-								<h4 class="mt-0 font-16">Subdomains Discovered</h4>
+								<h4 class="mt-0 font-16">发现的子域</h4>
 								<h2 class="text-primary my-3 text-center"><span data-plugin="counterup">{{subdomain_count|intcomma}}</span></h2>
 								<br>
-								<p class="mb-0"><span class="badge badge-soft-success">Alive Subdomains: {{alive_count}}</span></p>
+								<p class="mb-0"><span class="badge badge-soft-success">存活子域名: {{alive_count}}</span></p>
 							</div>
 						</div>
 					</div>
@@ -313,10 +313,10 @@ Scan Findings
 						<div class="card" id="tooltip-container1">
 							<div class="card-body">
 								<i class="fa fa-info-circle text-muted float-end" data-bs-container="#tooltip-container1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Total Endpoints discovered by reNgine during this scan. This includes any URLs discovered."></i>
-								<h4 class="mt-0 font-16">Endpoints Discovered</h4>
+								<h4 class="mt-0 font-16">发现的端点</h4>
 								<h2 class="text-primary my-3 text-center"><span data-plugin="counterup">{{endpoint_count|intcomma}}</span></h2>
 								<br>
-								<p class="text-success mb-0"><span class="badge badge-soft-success">Alive Endpoints: {{endpoint_alive_count}}</span></p>
+								<p class="text-success mb-0"><span class="badge badge-soft-success">存活的端点: {{endpoint_alive_count}}</span></p>
 							</div>
 						</div>
 					</div>
@@ -325,7 +325,7 @@ Scan Findings
 						<div class="card" id="tooltip-container2">
 							<div class="card-body">
 								<i class="fa fa-info-circle text-muted float-end" data-bs-container="#tooltip-container2" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Total Vulnerabilities discovered by reNgine. This will be populated only if vulnerability scan is performed during this scan."></i>
-								<h4 class="mt-0 font-16">Vulnerabilities Discovered</h4>
+								<h4 class="mt-0 font-16">发现的漏洞</h4>
 								<h2 class="text-danger my-3 text-center"><span data-plugin="counterup">{{total_vulnerability_count|intcomma}}</span></h2>
 								{% if history.vulnerability_scan %}
 								<p class="text-muted mb-0">
@@ -334,7 +334,7 @@ Scan Findings
 									<span class="w-title text-primary">{{low_count}} Low {{info_count}} Info and {{unknown_count}} Uknown Vulnerabilities</span>
 								</p>
 								{% else %}
-								<p class="text-muted mb-0 small">Vulnerability scan hasn't been performed.</p>
+								<p class="text-muted mb-0 small">尚未执行漏洞扫描.</p>
 								<br>
 								{% endif %}
 							</div>
