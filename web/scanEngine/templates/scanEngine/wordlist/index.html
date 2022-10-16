@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Wordlist
+字典
 {% endblock title %}
 
 {% block custom_js_css_link %}
@@ -12,12 +12,12 @@ Wordlist
 {% endblock custom_js_css_link %}
 
 {% block breadcrumb_title %}
-<li class="breadcrumb-item"><a href="{% url 'wordlist_list' %}">Wordlist</a></li>
+<li class="breadcrumb-item"><a href="{% url 'wordlist_list' %}">字典</a></li>
 <li class="breadcrumb-item active">All Worldlists</li>
 {% endblock breadcrumb_title %}
 
 {% block page_title %}
-Add New Wordlist
+添加新字典
 {% endblock page_title %}
 
 {% block main_content %}
@@ -29,7 +29,7 @@ Add New Wordlist
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <a class="btn btn-soft-primary float-end ms-1" href="{% url 'add_wordlist' %}" data-toggle="tooltip" data-placement="top" title="Add New Wordlist">Add New Wordlist</a>
+            <a class="btn btn-soft-primary float-end ms-1" href="{% url 'add_wordlist' %}" data-toggle="tooltip" data-placement="top" title="Add New Wordlist">添加新字典</a>
           </div>
         </div>
       </div>
@@ -42,9 +42,9 @@ Add New Wordlist
       <table id="wordlist_table" class="table style-3 table-hover">
         <thead>
           <tr>
-            <th>Wordlist Name</th>
-            <th>Shortname</th>
-            <th>Wordlist Count</th>
+            <th>字典名称</th>
+            <th>简称</th>
+            <th>字典行数</th>
             <th class="text-center">Action</th>
           </tr>
         </thead>
