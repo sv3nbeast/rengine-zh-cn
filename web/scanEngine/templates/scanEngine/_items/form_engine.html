@@ -1,18 +1,18 @@
 <div class="row">
   <div class="col-12">
-    <label for="domainName" class="form-label">Engine name</label>
+    <label for="domainName" class="form-label">模式名称</label>
     {{ form.engine_name }}
   </div>
   <div class="col-xl-4 col-md-12 col-sm-12 col-12 mt-4">
-    <h4 class="text-secondary">Engine</h4>
-    <p>Select what your Scan Engine has to perform.</p>
+    <h4 class="text-secondary">模式</h4>
+    <p>选择扫描模式是必须执行的操作。</p>
     <table>
       <tr>
         <td>
-          <h5 class="text-secondary">Subdomain Discovery</h5>
-          <span class="text-primary">(Selected by Default)</span>
+          <h5 class="text-secondary">子域名扫描</h5>
+          <span class="text-primary">(默认选择)</span>
           <br>
-          <span>(Choose the subdomain scanning tools from YAML config.)</span>
+          <span>(从YAML配置中选择子域扫描工具。)</span>
         </td>
         <td>
           <label class="switch s-icons s-outline s-outline-info">
@@ -23,8 +23,8 @@
       </tr>
       <tr>
         <td>
-          <h5 class="text-secondary">WAF Detection</h5>
-          <span class="text-primary">(Disabled by Default)</span>
+          <h5 class="text-secondary">WAF检测</h5>
+          <span class="text-primary">(默认禁用)</span>
         </td>
         <td>
           <label class="switch s-icons s-outline s-outline-info">
@@ -35,8 +35,8 @@
       </tr>
       <tr>
         <td>
-          <h5 class="text-secondary">Screenshot&nbsp;&nbsp;&nbsp;<span class="badge badge-soft-danger rounded-pill">Recommended</span></h5>
-          <span>(Takes the screenshots of all the discovered subdomains.)</span>
+          <h5 class="text-secondary">截图&nbsp;&nbsp;&nbsp;<span class="badge badge-soft-danger rounded-pill">推荐</span></h5>
+          <span>(对所有发现的子域进行屏幕截图。)</span>
         </td>
         <td>
           <label class="switch s-icons s-outline s-outline-info">
@@ -58,7 +58,7 @@
       </tr>
       <tr>
         <td>
-          <h5 class="text-secondary">Port Scan</h5>
+          <h5 class="text-secondary">端口扫描</h5>
         </td>
         <td>
           <label class="switch s-icons s-outline s-outline-info">
@@ -69,7 +69,7 @@
       </tr>
       <tr>
         <td>
-          <h5 class="text-secondary">Directory and Files Search</h5>
+          <h5 class="text-secondary">目录扫描和敏感文件扫描</h5>
         </td>
         <td>
           <label class="switch s-icons s-outline s-outline-info">
@@ -80,8 +80,8 @@
       </tr>
       <tr>
         <td>
-          <h5 class="text-secondary">Fetch All Endpoints(URLs)</h5>
-          <span>(Open Threat Exchange, Wayback Machine <br>Common Crawl)</span>
+          <h5 class="text-secondary">获取所有（URL）</h5>
+          <span>(获取公开情报, Wayback Machine <br>进行爬取)</span>
         </td>
         <td>
           <label class="switch s-icons s-outline s-outline-info">
@@ -92,13 +92,13 @@
       </tr>
       <tr>
         <td>
-          <h5 class="text-secondary">Vulnerability Scanner&nbsp;&nbsp;&nbsp;<span class="badge badge-soft-danger rounded-pill">Recommended</span></h5>
+          <h5 class="text-secondary">漏洞扫描&nbsp;&nbsp;&nbsp;<span class="badge badge-soft-danger rounded-pill">推荐</span></h5>
           <span>Scan for low hanging CVE and vulnerabilities.</span>
           <br>
           <span class="text-info">
-            For better Vulnerability Scan results, please turn on the <b>Fetch Endpoints</b>.
-            <br>reNgine will use nuclei to find vulnerabilities on those endpoints as well.
-            <br><span class="text-danger">This will also increase the scan time exponentially but much better results.</span>
+            要获得更好的漏洞扫描结果，请打开 <b>获取端点</b>。
+            <br>reNgine还将使用nuclei查找这些端点上的漏洞。
+            <br><span class="text-danger">这也将以指数形式增加扫描时间，但效果会更好。</span>
           </span>
         </td>
         <td>
@@ -111,18 +111,18 @@
     </table>
   </div>
   <div class="col-xl-8 col-md-12 col-sm-12 col-12 mt-4">
-    <h4 class="text-secondary">YAML Configurations</h4>
+    <h4 class="text-secondary">YAML 配置</h4>
     <p>
-      reNgine supports YAML based configurations for customizing the scan. The default settings are given below, you may choose to proceed with the default settings or configure it according to your choice.
+      reNgine支持基于YAML的配置来定制扫描。默认设置如下, 您可以选择继续使用默认设置或根据您的选择进行配置。
     </p>
-    <h5 class="text-secondary">reNgine YAML Documentation</h5>
-    To learn more about YAML config visit the official documentation at <a href="https://rengine.wiki/usage/scan_engine/" class="text-primary" target="_blank">https://rengine.wiki/pentester/scan_engine/</a>
+    <h5 class="text-secondary">reNgine YAML 文档</h5>
+    要了解有关YAML配置的更多信息,请访问官方文档: <a href="https://rengine.wiki/usage/scan_engine/" class="text-primary" target="_blank">https://rengine.wiki/pentester/scan_engine/</a>
     <p class="mt-1 text-danger">
-      Note: Invalid YAML configuration may crash scans.
+      注意:无效的YAML配置可能会导致扫描崩溃。
       <br>
-      <span class="text-uppercase">Please, do not modify the configuration unless you know what what you are doing.</span>
+      <span class="text-uppercase">请不要修改配置，除非您知道自己在做什么。</span>
       <br>
-      <span class="text-danger">If default YAML configuration doesn't automatically load, <a href="https://raw.githubusercontent.com/yogeshojha/rengine/master/default_yaml_config.yaml" target="_blank">download default configuration from here</a> and paste it. (Firefox may have issues loading default YAML configuration.)</span>
+      <span class="text-danger">如果默认的YAML配置没有自动加载,<a href="https://raw.githubusercontent.com/yogeshojha/rengine/master/default_yaml_config.yaml" target="_blank">从此处下载默认配置</a> 然后粘贴它。(Firefox可能在加载默认YAML配置时出现问题。)</span>
     </p>
     {{form.yaml_configuration}}
   </div>

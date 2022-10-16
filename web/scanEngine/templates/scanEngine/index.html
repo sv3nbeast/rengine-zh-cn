@@ -12,12 +12,12 @@ Scan Engine
 {% endblock custom_js_css_link %}
 
 {% block breadcrumb_title %}
-<li class="breadcrumb-item"><a href="{% url 'scan_engine_index' %}">Engines</a></li>
-<li class="breadcrumb-item active">All Scan Engines</li>
+<li class="breadcrumb-item"><a href="{% url 'scan_engine_index' %}">模式</a></li>
+<li class="breadcrumb-item active">所有扫描模式</li>
 {% endblock breadcrumb_title %}
 
 {% block page_title %}
-Scan Engines
+扫描模式
 {% endblock page_title %}
 
 {% block main_content %}
@@ -29,7 +29,7 @@ Scan Engines
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <a class="btn btn-soft-primary float-end ms-1" href="{% url 'add_engine' %}" data-toggle="tooltip" data-placement="top" title="Add New Scan Engine">Add Scan Engine</a>
+            <a class="btn btn-soft-primary float-end ms-1" href="{% url 'add_engine' %}" data-toggle="tooltip" data-placement="top" title="Add New Scan Engine">添加扫描模式</a>
           </div>
         </div>
       </div>
@@ -43,16 +43,16 @@ Scan Engines
         <thead>
           <tr>
             <th>ID</th>
-            <th>Engine Name</th>
+            <th>模式名称</th>
             <th class="text-center">Type</th>
-            <th class="text-center">Subdomain Discovery</th>
-            <th class="text-center">WAF Detection</th>
-            <th class="text-center">Screenshot</th>
+            <th class="text-center">子域名扫描</th>
+            <th class="text-center">WAF检测</th>
+            <th class="text-center">截图</th>
             <th class="text-center">OSINT</th>
-            <th class="text-center">Port Scan</th>
-            <th class="text-center">Directory & Files Discovery</th>
-            <th class="text-center">Fetch URLs</th>
-            <th class="text-center">Vulnerability Scan</th>
+            <th class="text-center">端口扫描</th>
+            <th class="text-center">目录和敏感文件扫描</th>
+            <th class="text-center">获取URL</th>
+            <th class="text-center">漏洞扫描</th>
             <th class="text-center">Action</th>
           </tr>
         </thead>
@@ -63,9 +63,9 @@ Scan Engines
             <td class="text-primary">{{engine_type.engine_name}}</td>
             <td class="text-center">
               {% if engine_type.default_engine %}
-              <span class="badge badge-soft-primary p-1">Default Engine</span>
+              <span class="badge badge-soft-primary p-1">默认模式</span>
               {% else %}
-              <span class="badge badge-soft-danger p-1">Custom Engine</span>
+              <span class="badge badge-soft-danger p-1">自定义模式</span>
               {% endif %}
             </td>
             <td class="text-center">
