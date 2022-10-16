@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Add targets
+添加目标
 {% endblock title %}
 
 
@@ -10,8 +10,8 @@ Add targets
 {% endblock custom_js_css_link %}
 
 {% block breadcrumb_title %}
-<li class="breadcrumb-item"><a href="{% url 'list_target' %}">Targets</a></li>
-<li class="breadcrumb-item active">Add Target</li>
+<li class="breadcrumb-item"><a href="{% url 'list_target' %}">目标</a></li>
+<li class="breadcrumb-item active">添加目标</li>
 {% endblock breadcrumb_title %}
 
 {% block page_title %}
@@ -60,7 +60,7 @@ Add targets
                 <div class="row mb-3">
                   <div class="col-6">
                     <div>
-                      <label for="simpleinput" class="form-label">Domain name</label>
+                      <label for="simpleinput" class="form-label">域名</label>
                       {{ form.name }}
                       <span class="float-end"><a href="#" onclick="show_whois()" class="btn disabled" id="btn_view_whois">(View WHOIS)</a></span>
                       {% if form.errors %}

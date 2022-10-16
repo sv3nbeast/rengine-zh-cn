@@ -3,7 +3,7 @@
 {% load humanize %}
 
 {% block title %}
-Subscan History
+子扫描历史记录
 {% endblock title %}
 
 {% block custom_js_css_link %}
@@ -17,7 +17,7 @@ Subscan History
 {% endblock breadcrumb_title %}
 
 {% block page_title %}
-SubScan History
+子扫描历史记录
 {% endblock page_title %}
 
 {% block main_content %}
@@ -36,22 +36,22 @@ SubScan History
               <div class="px-4 py-3">
                 <h4 class="headline-title">Filters</h4>
                 <div class="">
-                  <label for="filterByOrganization" class="form-label">Filter by Organization</label>
+                  <label for="filterByOrganization" class="form-label">按组织筛选</label>
                   <select class="form-control" id="filterByOrganization">
                   </select>
                 </div>
                 <div class="">
-                  <label for="filterByTarget" class="form-label">Filter by Targets</label>
+                  <label for="filterByTarget" class="form-label">按目标筛选</label>
                   <select class="form-control" id="filterByTarget">
                   </select>
                 </div>
                 <div class="">
-                  <label for="filterByScanType" class="form-label">Filter by Scan Type</label>
+                  <label for="filterByScanType" class="form-label">按扫描类型筛选</label>
                   <select class="form-control" id="filterByScanType">
                   </select>
                 </div>
                 <div class="">
-                  <label for="filterByScanStatus" class="form-label">Filter by Scan Status</label>
+                  <label for="filterByScanStatus" class="form-label">按扫描状态筛选</label>
                   <select class="form-control" id="filterByScanStatus">
                   </select>
                 </div>
@@ -61,7 +61,7 @@ SubScan History
             </div>
           </div>
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <a class="btn btn-soft-danger float-end disabled ms-1" href="#" onclick="deleteMultipleSubScan()" id="delete_multiple_button">Delete Multiple SubScans</a>
+            <a class="btn btn-soft-danger float-end disabled ms-1" href="#" onclick="deleteMultipleSubScan()" id="delete_multiple_button">删除多个子域名扫描</a>
           </div>
         </div>
       </div>
@@ -74,14 +74,14 @@ SubScan History
       <table id="subscan_history_table" class="table style-3 table-hover">
         <thead>
           <tr>
-            <th class="checkbox-column text-center">Serial Number</th>
-            <th class="text-center">Serial Number</th>
-            <th>Scanned Subdomain</th>
-            <th class="text-center">Task</th>
-            <th class="text-center">Engine</th>
-            <th>Scan Started</th>
-            <th class="text-center">Status</th>
-            <th class="text-center no-sorting">Action</th>
+            <th class="checkbox-column text-center">序列号</th>
+            <th class="text-center">序列号</th>
+            <th>子域名扫描</th>
+            <th class="text-center">任务</th>
+            <th class="text-center">引擎</th>
+            <th>启动扫描</th>
+            <th class="text-center">状态</th>
+            <th class="text-center no-sorting">动作</th>
           </tr>
         </thead>
         <tbody>
