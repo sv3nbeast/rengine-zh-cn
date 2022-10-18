@@ -23,13 +23,13 @@ Proxy Settings
     <div class="card">
       <div class="card-body">
         <h4 class="header-title">Proxy Settings</h4>
-        <p>Every website has a limit to certain number of requests allowed for a certain period of time from an particular IP Address, exceeding the limit will block any incoming requests from that particular IP Address for a specific period of time.
-          This results in unreiliable recon results. Suppose if you were to run Nuclei on a particular target with all the templates, your IP is likely to get banned because of the number of requests made by Nuclei.
+        <p>每个网站都对特定IP地址在特定时间段内允许的特定请求数有限制，超过该限制将在特定时间内阻止来自该特定IP地址的任何传入请求。
+          这将导致不可靠的对账结果。假设您要在具有所有模板的特定目标上运行Nuclei，您的IP可能会因为Nuclei发出的请求数而被禁止。
           <br>
-          And this is especially true for dorking and other OSINT reNgine does. After certain dorking attempts Google is likely to ban your IP for certain period of time.
+          这对于dorking和其他OSINT、 reNgine来说尤其如此。在某些愚蠢的尝试之后，谷歌可能会在一段时间内禁止你的IP。
         </p>
         <div class="alert alert-primary border-0" role="alert">
-          Using proxies is recommended.
+          建议使用代理。
         </div>
         <form method="POST">
           {% csrf_token %}
@@ -38,8 +38,8 @@ Proxy Settings
             <label class="form-check-label" for="use_proxy">Use Proxy</label>
           </div>
           <h4 class="header-title">Proxy List</h4>
-          <p>You can enter as many proxies as you want, reNgine will <span class="text-primary">randomly</span> pick one among them during the scan.</p>
-          <label class="form-label" for="proxies">Seperate the proxies by new line.</label>
+          <p>您可以输入任意多个代理，reNgine将 <span class="text-primary">随机</span> 扫描时从中选择一个。</p>
+          <label class="form-label" for="proxies">用新换分割代理。</label>
           {{form.proxies}}
           <button type="submit" class="btn btn-primary mt-3 float-end">Save Proxies</button>
         </form>
