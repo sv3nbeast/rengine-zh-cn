@@ -101,50 +101,50 @@ Notification Settings
             </div>
           </div>
           <div class="row">
-            <h4 class="col-form-label col-xl-3 col-sm-3 col-sm-2 mt-3 header-title">Send me notification for</h4>
+            <h4 class="col-form-label col-xl-3 col-sm-3 col-sm-2 mt-3 header-title">向我发送通知</h4>
             <div class="col-xl-9 col-lg-9 col-sm-10">
               {{form.send_scan_status_notif}}
-              <label class="form-label" for="send_scan_status_notif">Scan related updates (e.g. Scan Initiated, Scan Completed)</label>
+              <label class="form-label" for="send_scan_status_notif">扫描相关更新（例如扫描已启动、扫描已完成）</label>
               <br>
               {{form.send_interesting_notif}}
-              <label class="form-label" for="send_interesting_notif">Interesting Subdomains</label>
+              <label class="form-label" for="send_interesting_notif">有趣的子域</label>
               <br>
               {{form.send_vuln_notif}}
-              <label class="form-label" for="send_vuln_notif">Vulnerabilities Found</label>
+              <label class="form-label" for="send_vuln_notif">发现的漏洞</label>
               <br>
-              <span class="text-muted">*Informational Vulnerabilities will not be notified.</span>
+              <span class="text-muted">*不会通知信息漏洞.</span>
               <br>
               {{form.send_subdomain_changes_notif}}
               <label class="form-label" for="send_subdomain_changes_notif">
-                Subdomain Changes
+                子域名更改
                 <br>
                 <span class="text-muted">
-                  (e.g. when new Subdomains are discovered or subdomains are no longer available)
+                  （例如，当发现新的子域名或子域名不再可用时）
                 </span>
               </label>
             </div>
           </div>
           <div class="row mt-3">
-            <h4 class="col-form-label col-xl-3 col-sm-3 col-sm-2 mt-3 header-title">Upload Scan Results<br>(Recommended)</h4>
+            <h4 class="col-form-label col-xl-3 col-sm-3 col-sm-2 mt-3 header-title">上载扫描结果<br>(推荐)</h4>
             <div class="col-xl-9 col-lg-9 col-sm-10">
               {{form.send_scan_output_file}}
               <label class="form-label" for="send_scan_output_file">
-                Send Scan Output (e.g. Subdomain gathered file)
+                发送扫描输出（例如，子域名收集的文件）
                 <br>
-                <span class="text-primary">Only discord is supported!</span>
+                <span class="text-primary">仅支持 discord!</span>
                 <br>
                 <span class="text-muted">
-                  (This lets you upload scan results like list of subdomains to your discord)
+                  (这允许您将扫描结果（如子域列表）上载到您的discord)
                 </span>
               </label>
             </div>
           </div>
           <div class="row">
             <div class="col-12">
-              <button type="submit" class="btn btn-primary mt-3 float-end">Save & Test Notification</button>
+              <button type="submit" class="btn btn-primary mt-3 float-end">保存并测试通知</button>
             </div>
             <div class="col-12">
-              <p class="text-muted float-end">*Once saved, a test message will be sent to all the enabled services.</p>
+              <p class="text-muted float-end">*保存后，将向所有启用的服务发送测试消息.</p>
             </div>
           </div>
         </form>
