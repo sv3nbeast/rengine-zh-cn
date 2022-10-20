@@ -1,6 +1,6 @@
 <div class="col-md-12">
   <div class="mb-3">
-    <label for="tool_name" class="form-label">Tool Name <span class="text-danger">(Required)</span></label>
+    <label for="tool_name" class="form-label">工具名称 <span class="text-danger">(Required)</span></label>
     {{form.name}}
     {% if form.errors.name %}
     <span class="text-danger">
@@ -11,22 +11,22 @@
 </div>
 <div class="col-md-12">
   <div class="mb-3">
-    <label for="tool_category" class="form-label">Tool Category</label>
+    <label for="tool_category" class="form-label">工具类别</label>
     <br>
-    <span class="me-4">Does this tool gathers subdomains?</span>
+    <span class="me-4">此工具是否收集子域?</span>
     <label class="switch s-icons s-outline s-outline-info">
       {{form.is_subdomain_gathering}}
       <span class="slider round"></span>
     </label>
     <br>
-    <span class="text-muted">If you have choosen this tool as subdomain gathering tool, you'll be able to use it in scan engine configuration and provide this tool name inside <code>uses_tools</code>. If not, you will still be able to use this tool in our custom scripting engine.</span>
+    <span class="text-muted">如果您选择此工具作为子域收集工具，则可以在扫描引擎配置中使用它，并在其中提供此工具名称 <code>uses_tools</code>. 如果没有，您仍然可以在我们的自定义脚本引擎中使用此工具.</span>
   </div>
 </div>
 <div class="col-md-12">
   <div class="mb-3">
-    <label for="github_url" class="form-label">Github URL <span class="text-danger">(Required)</span></label>
+    <label for="github_url" class="form-label">Github URL <span class="text-danger">(必选)</span></label>
     <br>
-    <label class="form-label text-primary">Github URL is required to check the recent releases and updates.</label>
+    <label class="form-label text-primary">需要Github URL来检查最新版本和更新.</label>
     {{form.github_url}}
     {% if form.errors.github_url %}
     <span class="text-danger">
@@ -37,60 +37,60 @@
 </div>
 <div class="col-md-6">
   <div class="mb-3">
-    <label for="tool_logo_url" class="form-label">Tool Logo (URL) <span class="text-muted">(Optional)</span></label>
+    <label for="tool_logo_url" class="form-label">Tool Logo (URL) <span class="text-muted">(可选)</span></label>
     {{form.logo_url}}
   </div>
 </div>
 <div class="col-md-6">
   <div class="mb-3">
-    <label for="license_url" class="form-label">Tool License URL <span class="text-muted">(Optional)</span></label>
+    <label for="license_url" class="form-label">Tool License URL <span class="text-muted">(可选)</span></label>
     {{form.license_url}}
   </div>
 </div>
 <div class="col-md-12">
   <div class="mb-3">
-    <label for="tool_description" class="form-label">Description <span class="text-danger">(Required)</span></label>
+    <label for="tool_description" class="form-label">Description <span class="text-danger">(可选)</span></label>
     {{form.description}}
   </div>
 </div>
-<h5>Tool Installation Process</h5>
+<h5>工具安装流程</h5>
 <div class="row">
-  <p class="text-danger">Please note that any commands here will directly execute in shell, so please be careful of the commands you are using.</p>
+  <p class="text-danger">请注意，这里的任何命令都将直接在shell中执行，所以请小心您正在使用的命令.</p>
   <div class="col-md-12">
     <div class="mb-3">
-      <label for="tool_logo_url" class="form-label">Installation Command <span class="text-danger">(Required)</span></label>
+      <label for="tool_logo_url" class="form-label">安装命令 <span class="text-danger">(必选)</span></label>
       <p>
         <ul>
           <li>
-            If the tool has to be installed using github clone, then your installation command would be
+            如果必须使用github克隆安装该工具，那么您的安装命令将是
             <br>
             <code> git clone https://github.com/user/tool </code>
           </li>
           <li>
-            If the tool has to be installed using go, the your installation command would be
+            如果必须使用go安装该工具，则安装命令为
             <br>
             <code>go install -v github.com/tool@latest</code>
             <br>
-            Please note that, go get command is no longer supported by go. Instead you should use go install. <a href="https://go.dev/doc/go-get-install-deprecation"> Learn why! </a>
+            请注意，go不再支持go get命令。相反，您应该使用go install. <a href="https://go.dev/doc/go-get-install-deprecation"> 了解原因! </a>
           </li>
         </ul>
       </p>
-      <label for="install_command" class="form-label">Installation Command <span class="text-danger">(Required)</span></label>
+      <label for="install_command" class="form-label">安装命令 <span class="text-danger">(必选)</span></label>
       {{form.install_command}}
     </div>
   </div>
 </div>
 <div class="col-md-12">
   <div class="mb-3">
-    <label for="tool_update" class="form-label">How does this tool update? (Optional)</label>
+    <label for="tool_update" class="form-label">此工具如何更新？ (可选)</label>
     <p>
       <ul>
-        <li>If the tool was installed using git clone, it is recommended to use <code>git pull</code> for updating.</li>
-        <li>If the tool was installed using go, it is recommended to use the same command as go install.</li>
+        <li>如果该工具是使用git克隆安装的，建议使用 <code>git pull</code> 用于更新.</li>
+        <li>如果该工具是使用go安装的，建议使用与go install相同的命令.</li>
       </ul>
-      <strong>If update command is not provided, you will not be able to update the tools.</strong>
+      <strong>如果未提供更新命令，您将无法更新工具.</strong>
     </p>
-    <label for="update_command" class="form-label">Update command</label>
+    <label for="update_command" class="form-label">更新命令</label>
     {{form.update_command}}
     {% if form.errors.update_command %}
     <span class="text-danger">
@@ -101,19 +101,19 @@
 </div>
 <div class="col-md-12">
   <div class="mb-3">
-    <label for="tool_update" class="form-label">How do you check the version in this tool? (Optional)</label>
+    <label for="tool_update" class="form-label">如何检查此工具中的版本？ (可选)</label>
     <p>
-      reNgine will use this command to check the version of the tool and let you know if there is any update available. Most tools will display the version either of these ways
+      reNgine将使用此命令检查工具的版本，并让您知道是否有可用的更新。大多数工具将通过以下任一方式显示版本
       <ul>
         <li>toolname -v</li>
         <li>toolname -V</li>
         <li>toolname --version</li>
         <li>python tool_name.py -v</li>
       </ul>
-      You can provide these commands depending on your tool, and reNgine will identify the version number.
+      您可以根据您的工具提供这些命令，reNgine将标识版本号。
     </p>
-    <label for="version_lookup_command" class="form-label">Version Lookup Command</label>
-    <span class="text-muted">(We have auto generated this for you based on your installation steps)</span>
+    <label for="version_lookup_command" class="form-label">版本查找命令</label>
+    <span class="text-muted">(我们已经根据您的安装步骤为您自动生成了这个)</span>
     {{form.version_lookup_command}}
     {% if form.errors.version_lookup_command %}
     <span class="text-danger">
@@ -124,13 +124,13 @@
 </div>
 <div class="col-md-12">
   <div class="mb-3">
-    <label for="tool_update" class="form-label">Version match regex (Optional)</label>
+    <label for="tool_update" class="form-label">版本匹配正则表达式 (可选)</label>
     <p>
-      reNgine needs version match regex to find out if there is any update available or not. You can check how the tool displays the version number and we can generate the regex for you, or you can do that manually as well.
+      reNgine需要版本匹配regex 来确定是否有可用的更新。您可以检查工具如何显示版本号，我们可以为您生成正则表达式，或者您也可以手动执行此操作.
       <br>
-      <strong>If version regex is not given, reNgine will not be able to check the updates automatically. However, you can still force update the tools.</strong>
+      <strong>如果未提供版本regex，reNgine将无法自动检查更新。但是您仍然可以强制更新工具.</strong>
       <br>
-      <strong>Additionally, we can also generate the version regext for you. You can select how this tool displays the version number. <br>See, how the tool names the release version. https://github.com/user/tool/releases</strong>
+      <strong>此外，我们还可以为您生成版本regext。您可以选择此工具显示版本号的方式. <br>请参见，工具如何命名发布版本。 https://github.com/user/tool/releases</strong>
     </p>
     <button type="button" class="btn btn-outline-primary waves-effect waves-light" id="v1_2">v1.2 / V1.2 / 1.2</button>
     <button type="button" class="btn btn-outline-primary waves-effect waves-light" id="v1_2_3">v1.2.3 / V1.2.3 / 1.2.3</button>
@@ -147,20 +147,20 @@
   </div>
   <!-- <div class="row" id="subdomain_extra"> -->
   <div class="row">
-    <h5>Subdomain Gathering Tool Additional Information</h5>
-    <h6 class="text-danger">Please note that this subdomain gathering tool must support subdomain output in the form of txt file.</h6>
-    <p>Since you have choosen this tool as subdomain gathering tool, we require additional information on how this tool runs.</p>
+    <h5>子域名收集工具附加信息</h5>
+    <h6 class="text-danger">请注意，此子域收集工具必须支持txt文件形式的子域输出.</h6>
+    <p>由于您选择此工具作为子域收集工具，我们需要有关此工具如何运行的其他信息.</p>
     <div class="">
       <span class="font-16">
-        reNgine needs to know how this tool accepts target and output the subdomain results.<br>
-        <strong>Use the below syntax wherever required.</strong>
+        reNgine需要知道该工具如何接受目标并输出子域结果.<br>
+        <strong>在需要的地方使用以下语法.</strong>
         <ul>
-          <li><code>{PATH}</code>, Use this if your tool is github cloned. Example. <code>python3 {PATH}/subdomain.py</code></li>
-          <li><code>{TARGET}</code>, Use this for the command-line arg that takes in domain as input target. Example. <code>subfinder -d {TARGET}</code></li>
-          <li><code>{OUTPUT}</code>, Use this for the command-line arg that takes the output arg. Example. <code>subfinder -d {TARGET} -o {OUTPUT}</code></li>
-          <li><code>{PROXY}</code>, Use this if your tool supports proxy. Example. <code>tool_name -p {PROXY}</code></li>
+          <li><code>{PATH}</code>, 如果您的工具是github克隆的，请使用此选项. Example. <code>python3 {PATH}/subdomain.py</code></li>
+          <li><code>{TARGET}</code>, 将其用于将域中的作为输入目标的命令行参数. Example. <code>subfinder -d {TARGET}</code></li>
+          <li><code>{OUTPUT}</code>, 将其用于接受输出参数的命令行参数. Example. <code>subfinder -d {TARGET} -o {OUTPUT}</code></li>
+          <li><code>{PROXY}</code>, 如果您的工具支持代理，请使用此选项. Example. <code>tool_name -p {PROXY}</code></li>
         </ul>
-        You can use the combinations of the above syntax and also you can use any other command-line argument that your tool supports.
+        您可以使用以上语法的组合，也可以使用工具支持的任何其他命令行参数.
       </span>
     </div>
     <div class="col-md-12">
