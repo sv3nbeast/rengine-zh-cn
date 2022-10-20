@@ -10,12 +10,12 @@ Start Scan
 {% endblock custom_js_css_link %}
 
 {% block breadcrumb_title %}
-<li class="breadcrumb-item"><a href="{% url 'list_target' %}">Target</a></li>
-<li class="breadcrumb-item active">Initiate Multiple Scans</li>
+<li class="breadcrumb-item"><a href="{% url 'list_target' %}">目标</a></li>
+<li class="breadcrumb-item active">启动多个扫描</li>
 {% endblock breadcrumb_title %}
 
 {% block page_title %}
-Initiate Scan for Multiple Targets
+启动多目标扫描
 {% endblock page_title %}
 
 {% block main_content %}
@@ -29,12 +29,12 @@ Initiate Scan for Multiple Targets
         {% endfor %}
         <form method="POST">
           {% csrf_token %}
-          <h4 class="header-title mt-4">Select the scan type</h4>
+          <h4 class="header-title mt-4">选择扫描模式</h4>
           <div class="mt-4">
             {% if custom_engine_count == 0 %}
             <div class="alert bg-soft-primary border-0 mb-4" role="alert">
-              <span><b>Tips! </b> You do not have any custom scan engines. Would you like to create your own scan engine?</span>
-              <a href="{% url 'add_engine' %}" class="text-primary">Create Custom Scan Engine</a>
+              <span><b>Tips! </b> 您没有任何自定义扫描引擎. 是否要创建自己的扫描引擎?</span>
+              <a href="{% url 'add_engine' %}" class="text-primary">创建自定义扫描模式</a>
             </div>
             {% endif %}
             <input type="hidden" name="list_of_domain_id" value="{{domain_ids}}">

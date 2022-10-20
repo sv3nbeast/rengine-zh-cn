@@ -105,9 +105,9 @@ function deleteScheduledScan(id) {
 
 function change_scheduled_task_status(id, checkbox) {
 	if (checkbox.checked) {
-		text_msg = 'Schedule Scan Started';
+		text_msg = '计划扫描 Started';
 	} else {
-		text_msg = 'Schedule Scan Stopped';
+		text_msg = '计划扫描 Stopped';
 	}
 	Snackbar.show({
 		text: text_msg,

@@ -4,7 +4,7 @@
 {% load custom_tags %}
 {% block title %}
 {% load mathfilters %}
-Target Summary for {{target.name}}
+目标概述 for {{target.name}}
 {% endblock title %}
 
 {% block custom_js_css_link %}
@@ -19,12 +19,12 @@ Target Summary for {{target.name}}
 
 {% block breadcrumb_title %}
 <li class="breadcrumb-item"><a href="{% url 'list_target' %}">Targets</a></li>
-<li class="breadcrumb-item active">Target Summary</li>
+<li class="breadcrumb-item active">目标概述</li>
 <li class="breadcrumb-item active" aria-current="page">{{target.name}}</li>
 {% endblock breadcrumb_title %}
 
 {% block page_title %}
-Target Summary
+目标概述
 {% endblock page_title %}
 
 {% block main_content %}
